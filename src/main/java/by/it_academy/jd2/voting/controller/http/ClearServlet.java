@@ -1,6 +1,7 @@
-package by.it_academy.jd2.servlets;
+package by.it_academy.jd2.voting.controller.http;
 
-import by.it_academy.jd2.Database;
+import by.it_academy.jd2.voting.service.ClearService;
+import by.it_academy.jd2.voting.service.api.IClearService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -11,6 +12,7 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/clear")
 public class ClearServlet extends HttpServlet {
+    private final IClearService clearService=new ClearService();
     /**
      * Метод, который очищает данные, хранящиеся в классе Database, то есть очищает статистику голосования
      * @param req - объект HttpServletRequest
@@ -20,6 +22,6 @@ public class ClearServlet extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Database.cleanData();
+        clearService.clear();
     }
 }
