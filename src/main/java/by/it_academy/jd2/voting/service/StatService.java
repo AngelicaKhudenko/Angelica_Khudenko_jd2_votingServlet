@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class StatService implements IStatService {
-    private IVoteService voteService=null;
+    private IVoteService voteService=new VoteService();
 
     @Override
     public AllStatDto get() {
