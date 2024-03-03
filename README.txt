@@ -31,3 +31,4 @@
     * AllStatDtoBuilder
 - пакет by.it_academy.jd2.voting.service.factory
     * ServiceFactory - класс, выполняющий функции паттерна factory, создающий объекты класса, реализующего интерфейс IStatService, IVoteService, IClearService
+- StatServiceTest - тестирование StatService
