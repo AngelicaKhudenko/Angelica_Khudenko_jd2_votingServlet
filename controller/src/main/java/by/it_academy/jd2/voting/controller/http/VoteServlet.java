@@ -20,7 +20,7 @@ public class VoteServlet extends HttpServlet {
     private final static String GENRE_PARAM_NAME="genre";
     private final static String ABOUT_PARAM_NAME="about";
 
-    private final IVoteService voteService= ServiceFactory.getVoteService();
+    private final IVoteService voteService=ServiceFactory.getVoteService();
     private final IStatService statService=ServiceFactory.getStatService();
 
     /**
